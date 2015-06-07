@@ -9,7 +9,8 @@ Bundler.require(*Rails.groups)
 module Rundowner
   class Application < Rails::Application
     # Whitelist my private network
-    config.web_console.whitelisted_ips = '10.0.0.0/16'
+    config.web_console.whitelisted_ips = '10.0.0.0/16' unless \
+      Rails.env.production?
     
     # Settings in config/environments/* take precedence over those specified
     # here.

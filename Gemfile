@@ -30,8 +30,16 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
+group :production do
+  # Use Unicorn as the app server
+  gem 'unicorn'
+  # Include 'rails_12factor' gem to enable all platform features
+  # See https://devcenter.heroku.com/articles/rails-integration-gems
+  gem 'rails_12factor'
+end
+
+  
+  
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

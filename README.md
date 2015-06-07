@@ -4,7 +4,7 @@
 
 **rundowner** is a testbed for prototyping features in *Ruby on Rails*.
 
-* Ruby 2.0.0p353
+* Ruby 2.2.2
 
 * Rails 4.2.1
 

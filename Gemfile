@@ -61,4 +61,10 @@ group :development do
   gem 'puma'
   gem 'pry'
 end
-  
+
+group :test do
+  # from pfox
+  gem 'simplecov', :require => false
+  # from https://github.com/codeclimate/ruby-test-reporter
+  gem 'codeclimate-test-reporter'
+end

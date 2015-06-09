@@ -33,6 +33,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # https://github.com/gemgento/rails_script
 gem 'rails_script', '~> 0.6.1'
 
+# to support https://github.com/blowmage/minitest-rails-capybara
+gem 'minitest-rails'
+
 group :production do
   # Use Unicorn as the app server
   gem 'unicorn'

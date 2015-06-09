@@ -41,9 +41,6 @@ group :production do
   gem 'rails_12factor'
 end
 
-  
-  
-
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -70,4 +67,6 @@ group :test do
   gem 'simplecov', :require => false
   # from https://github.com/codeclimate/ruby-test-reporter
   gem 'codeclimate-test-reporter'
+  # browser automation
+  gem 'selenium-webdriver'
 end

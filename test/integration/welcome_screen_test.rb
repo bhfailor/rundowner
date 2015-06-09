@@ -7,17 +7,26 @@ class WelcomeScreenTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select 'body > h1', 'Welcome Participant'
   end
+  
   test "visit homepage with firefox" do
     require "selenium-webdriver"
-    require 'pry'
 
+    cmd = 'rails s -e test -d'
+    kill_process(cmd) # kill a preexisting rails server
+    server_msg = %x( #{ cmd } )  # get fails unless server is running
     driver = Selenium::WebDriver.for :firefox
-    #   driver = Selenium::Webdriver.for :firefox
-    #    driver.navigate.to 'http://wytheville.mylabsplus.com'
-
-    driver.navigate.to 'http://localhost:3000'
-
+    driver.get 'http://localhost:3000'
+    a = driver.switch_to.alert
+    assert a.text, "welcome#index"
+    a.dismiss
     driver.quit
+    kill_process(cmd)
   end
-  
+
+  private
+
+    def kill_process(cmd)
+      pid = %x(ps ax | grep '#{ cmd }' | grep -v grep).scan(/^(\d+)\s/)
+      %x(kill #{ pid[0][0] }) if pid && pid[0] && pid[0][0]
+    end
 end

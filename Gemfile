@@ -73,4 +73,9 @@ group :test do
   gem 'simplecov', :require => false
   # from https://github.com/codeclimate/ruby-test-reporter
   gem 'codeclimate-test-reporter'
+  # from https://github.com/blowmage/minitest-rails-capybara
+  gem 'minitest-rails-capybara'
+  # from https://github.com/wojtekmach/minitest-metadata
+  gem 'minitest-metadata', require: false
+  gem 'selenium-webdriver'
 end

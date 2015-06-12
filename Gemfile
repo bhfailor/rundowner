@@ -36,6 +36,9 @@ gem 'rails_script', '~> 0.6.1'
 # to support https://github.com/blowmage/minitest-rails-capybara
 gem 'minitest-rails'
 
+# asynchronous processes
+gem 'sidekiq'
+
 group :production do
   # Use Unicorn as the app server
   gem 'unicorn'
@@ -78,4 +81,6 @@ group :test do
   # from https://github.com/wojtekmach/minitest-metadata
   gem 'minitest-metadata', require: false
   gem 'selenium-webdriver'
+  # http://chriskottom.com/blog/2014/06/dress-up-your-minitest-output/
+  gem 'minitest-reporters'
 end

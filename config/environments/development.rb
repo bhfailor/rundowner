@@ -29,7 +29,8 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  # Asset digests allow you to set far-future HTTP expiration dates on all assets,
+  # Asset digests allow you to set far-future HTTP expiration dates on all
+  # assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
@@ -37,6 +38,7 @@ Rails.application.configure do
   # Checks for improperly declared sprockets dependencies.
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
+#  config.assets.raise_runtime_errors = false
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

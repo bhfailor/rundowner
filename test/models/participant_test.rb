@@ -2,12 +2,16 @@ require "test_helper"
 
 class ParticipantTest < ActiveSupport::TestCase
   def participant
-    @participant ||= Participant.new
+    @participant ||=
+      Participant.new(password: 'top_sekret', email: 'three.foo@bar.com')
   end
 
-  def test_valid
-    participant.email = 'three.foo@bar.com' # not used in fixtures
-    participant.password = 'top_sekret' # at least 8 characters
+  test 'validation' do
     assert participant.valid?
   end
+
+  test 'saving to db' do
+    assert participant.save!
+  end
+    
 end

@@ -39,6 +39,9 @@ gem 'minitest-rails'
 # asynchronous processes
 gem 'sidekiq'
 
+# authentication
+gem 'devise'
+
 group :production do
   # Use Unicorn as the app server
   gem 'unicorn'

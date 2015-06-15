@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :participants
   # Root route
   root :to => 'welcome#index'
   

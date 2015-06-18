@@ -2,5 +2,6 @@ class Participant < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :trackable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :confirmable, :validatable
+  :recoverable, :rememberable, :confirmable, :validatable
+  enum role: [:client, :trainer, :dev]
 end

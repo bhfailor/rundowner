@@ -13,5 +13,14 @@ class ParticipantTest < ActiveSupport::TestCase
   test 'saving to db' do
     assert participant.save!
   end
-    
+  
+  test 'setting roles' do
+    assert participant.trainer!
+    assert participant.trainer?
+    assert participant.client!
+    assert participant.client?
+    assert participant.dev!
+    assert participant.dev?
+  end
+  
 end

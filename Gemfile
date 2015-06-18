@@ -42,6 +42,9 @@ gem 'sidekiq'
 # authentication
 gem 'devise'
 
+# authorization
+gem 'pundit'
+
 group :production do
   # Use Unicorn as the app server
   gem 'unicorn'

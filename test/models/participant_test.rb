@@ -22,5 +22,9 @@ class ParticipantTest < ActiveSupport::TestCase
     assert participant.dev!
     assert participant.dev?
   end
+
+  test 'setting the default role' do
+    assert participant.client?
+  end
   
 end

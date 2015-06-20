@@ -1,3 +1,11 @@
+<%# resource_name and devise_mapping are not defined in other views.
+    I am guessing that they are helper functions.  Acutally resource_name
+    is found in a form_for call:
+    form_for(resource, as: resource_name. . .)
+
+    So, this view works for ParticipantController but not WelcomeController.
+    Why is that? %>
+
 <%- if controller_name != 'sessions' %>
   <%= link_to "Log in", new_session_path(resource_name) %><br />
 <% end -%>

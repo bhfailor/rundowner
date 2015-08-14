@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  devise_for :teachers, class_name: "College::Teacher"
+  namespace :school do
+    devise_for :teachers, class_name: "School::Teacher", module: 'devise'
+    resources :teachers
+  end
   devise_for :participants
   # Root route
   root :to => 'welcome#index'
